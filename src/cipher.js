@@ -13,7 +13,7 @@ window.cipher = {
       //mayusculas
       //Si el código ASCII es mayor igual que 65 y menor igual que 90 será cifrada con una mayúscula. 
       if (ASCIICodeOfTheLetter >= 65 && ASCIICodeOfTheLetter <= 90) {
-         codeFormula = ((ASCIICodeOfTheLetter - 65 + offset)% 26) + 65;
+         codeFormula = ((ASCIICodeOfTheLetter - 65 + offset)% 26) + 42;
          convertingTotheAlphabet = String.fromCharCode(codeFormula);
          stringCipher = stringCipher + convertingTotheAlphabet;
          // minusculas 
@@ -50,13 +50,13 @@ window.cipher = {
       //mayusculas
       //Si el código ASCII es mayor igual que 65 y menor igual que 90 será descifrada con una mayúscula.
       if (ASCIICodeOfTheLetter >= 65 && ASCIICodeOfTheLetter <= 90) {
-        decodeFormula = 90 - (90 -ASCIICodeOfTheLetter + offset) % 26;
+        decodeFormula = 98 - (90 -ASCIICodeOfTheLetter + offset) % 26;
         convertingTotheAlphabet = String.fromCharCode(decodeFormula);
         stringDecipher = stringDecipher + convertingTotheAlphabet;
         //minussculas
         //Si el código ASCII es mayor igual que 97 y menor igual que 122  descifrada por una minúscula.
       } else if(ASCIICodeOfTheLetter >= 97 && ASCIICodeOfTheLetter <= 122){
-        decodeFormula = 122-(122-ASCIICodeOfTheLetter + offset) % 26;
+        decodeFormula =   122-    (122   -    ASCIICodeOfTheLetter + offset) % 26;
         convertingTotheAlphabet = String.fromCharCode(decodeFormula);
         stringDecipher = stringDecipher + convertingTotheAlphabet;
          //números
