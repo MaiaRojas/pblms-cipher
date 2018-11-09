@@ -61,10 +61,11 @@ window.cipher = {
         stringDecipher = stringDecipher + convertingTotheAlphabet;
          //números
          //Si el código ASCII es mayor igual que 48 y menor igual que 57 será  descifrado por un número 
-      } else if (ASCIICodeOfTheLetter >= 48 && ASCIICodeOfTheLetter <= 57){
+      } 
+      else if (ASCIICodeOfTheLetter >= 48 && ASCIICodeOfTheLetter <= 57){
          decodeFormula = 57 - (57 - ASCIICodeOfTheLetter + offset) % 10;
          convertingTotheAlphabet = String.fromCharCode(decodeFormula);
-         stringDecipher = stringDecipher + convertingTotheAlphabet;
+                    stringDecipher = stringDecipher + convertingTotheAlphabet;
          //defecto
         //cualquier otro caracter será reemplazado por sí mismo.
       } else{
@@ -72,11 +73,5 @@ window.cipher = {
       }
     }
    return (stringDecipher);
-  },
-  createCipherWithOffset (offset){	  
-    return {	
-      encode  (string){return cipher.encode(offset, string)},	
-      decode (string){return cipher.decode(offset, string)}	
-    };	
   }
 };
